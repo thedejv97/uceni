@@ -10,5 +10,8 @@
         <module name="learning" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="uceni" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

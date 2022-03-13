@@ -1,7 +1,10 @@
 import com.david.Brand;
 import com.david.Car;
 import com.david.FuelType;
+import com.david.Garage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -20,7 +23,9 @@ public class main {
         Car astra = new Car(Brand.OPEL, 5, "hatchback 4x2", FuelType.GAS, 4.2, "astra");
         Car model3 = new Car(Brand.TESLA, 5, "liftback 4x4", FuelType.ELECTRIC, 5.9, "model 3");
 
+        List<Car> listOfCars = Arrays.asList(sx4, golf, fabia2, mondeo, punto, rada2, h1, mazda, rav4, astra, model3);
 
+        List<Garage> listOfGarages = new ArrayList<>();
 
 
     }
