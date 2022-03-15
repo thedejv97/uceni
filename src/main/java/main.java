@@ -1,7 +1,4 @@
-import com.david.Brand;
-import com.david.Car;
-import com.david.FuelType;
-import com.david.Garage;
+import com.david.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +24,62 @@ public class main {
 
         List<Garage> listOfGarages = new ArrayList<>();
 
+        if(sx4.getBrand() == Brand.SUZUKI){
+            new ArrayList<Garage>(listOfGarages);
+}
+
+        if(golf.getBrand() == Brand.VOLKSWAGEN){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
+        if(fabia2.getBrand() == Brand.SKODA){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
+        if(mondeo.getBrand() == Brand.FORD){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
+        if(punto.getBrand() == Brand.FIAT){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
+        if(rada2.getBrand() == Brand.BMW){
+            new ArrayList<Garage>(listOfGarages);
+        }
+        if(h1.getBrand() == Brand.HYUNDAI){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
+        if(mazda.getBrand() == Brand.MAZDA){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
+        if(rav4.getBrand() == Brand.TOYOTA){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
+        if(astra.getBrand() == Brand.OPEL){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
+        if(model3.getBrand() == Brand.TESLA){
+            new ArrayList<Garage>(listOfGarages);
+        }
+
 
     }
 
+
+
 }
+
+
+
+
+
+
+
+
+
+
