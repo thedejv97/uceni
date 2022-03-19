@@ -33,4 +33,12 @@ public class Garage {
     public void addCar(Car car) {
         this.cars.add(car);
     }
+
+    @Override
+    public String toString() {
+        return "Garage{" +
+                "cars count = " + cars.size() +
+                ", brand = " + brand +
+                '}';
+    }
 }
