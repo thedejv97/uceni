@@ -12,13 +12,13 @@ public class PINValidatorTest {
 
         String pin1 = "5486794236541";
         String pin2 = "2";
-        String pin3 = "060891/4682";
+        String pin3 = "590615/6102";
         String pin4 = "151865/8574";
-        String pin5 = "285476/1215";
+        String pin5 = "800510/3579";
         String pin6 = "147896/5486";
-        String pin7 = "230802/1111";
+        String pin7 = "726222/1516";
         String pin8 = "321399/2584";
-        String pin9 = "316297/4867";
+        String pin9 = "075226/2819";
         String pin10 = "555555/5555";
         String pin11 = "111111/1111";
 
