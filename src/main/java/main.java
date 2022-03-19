@@ -28,7 +28,6 @@ public class main {
 
         List<Garage> listOfGarages = new ArrayList<>();
 
-<<<<<<< HEAD
         if(sx4.getBrand() == Brand.SUZUKI) {
           new ArrayList<>(listOfGarages);
         }
@@ -73,7 +72,7 @@ public class main {
         }
 
 System.out.println(listOfGarages);
-=======
+
         for (Car car : listOfCars) {
             if (!listOfGarages.isEmpty()) {
                 boolean garageFound = false;
@@ -94,7 +93,6 @@ System.out.println(listOfGarages);
             }
         }
         System.out.println("listOfGarages = " + listOfGarages);
->>>>>>> main
     }
 
 
