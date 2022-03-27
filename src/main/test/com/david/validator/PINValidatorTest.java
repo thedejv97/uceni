@@ -21,6 +21,11 @@ public class PINValidatorTest {
         String pin9 = "976228/4867";
         String pin10 = "555555/5555";
         String pin11 = "111111/1111";
+        String pin12 = "";
+        String pin13 = "///////////";
+        String pin14 = "jhtkdzkrt/k";
+        String pin15 = "jhtkdz/kjhg";
+        String pin16 = "poiuztrewqa";
 
         assertFalse(PINValidator.isPINValid(pin1));
         assertFalse(PINValidator.isPINValid(pin2));
@@ -33,6 +38,11 @@ public class PINValidatorTest {
         assertTrue(PINValidator.isPINValid(pin9));
         assertFalse(PINValidator.isPINValid(pin10));
         assertTrue(PINValidator.isPINValid(pin11));
+        assertFalse(PINValidator.isPINValid(pin12));
+        assertFalse(PINValidator.isPINValid(pin13));
+        assertFalse(PINValidator.isPINValid(pin14));
+        assertFalse(PINValidator.isPINValid(pin15));
+        assertFalse(PINValidator.isPINValid(pin16));
 
 
     }

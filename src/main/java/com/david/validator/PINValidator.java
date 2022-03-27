@@ -33,22 +33,28 @@ public class PINValidator {
         month = Integer.parseInt(m);
         day = Integer.parseInt(d);
 
+        boolean isDayValid = false;
+        boolean isMonthValid = false;
+
         if (month > 0 & month < 13) {
             sex = "man";
-            return true;
-        }
-        if (month > 50 & month < 63) {
+            isMonthValid = true;
+        } else if (month > 50 & month < 63) {
             sex = "woman";
             month = -50;
-            return true;
+            isMonthValid = true;
         }
+
         if (day > 0 & day < 32) {
+            isDayValid = true;
+        }
+
+        if (isDayValid && isMonthValid) {
+            System.out.println(day + "." + month + "." + year + " " + sex + " secret number = " + secretNumber);
             return true;
         }
 
-
-        System.out.println(day + "." + month + "." + year + " " + sex + " secret number = " + secretNumber);
-        return true;
+        return false;
 
 
     }
