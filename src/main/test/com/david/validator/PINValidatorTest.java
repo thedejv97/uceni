@@ -12,13 +12,6 @@ public class PINValidatorTest {
 
         String pin1 = "5486794236541";
         String pin2 = "2";
-        String pin3 = "590615/6102";
-        String pin4 = "151865/8574";
-        String pin5 = "800510/3579";
-        String pin6 = "147896/5486";
-        String pin7 = "726222/1516";
-        String pin8 = "321399/2584";
-        String pin9 = "075226/2819";
         String pin3 = "910608/4682";
         String pin4 = "651814/8574";
         String pin5 = "765425/1215";

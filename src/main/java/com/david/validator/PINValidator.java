@@ -16,36 +16,37 @@ public class PINValidator {
         // validace zda se jedná o validní řetězec PIN (rodné číslo)
         // vyextrahovat jednotlivé prvky: datum, pohlaví, bezpečnostní známku (číslo za lomítkem)
 
+        if (personalNumber.length() != 11) { //length validity
+            return false;
+        }
+
+        if (!personalNumber.contains("/")) {
+            return false;
+        }
+
         String y = personalNumber.substring(0, 2);
         String m = personalNumber.substring(2, 4);
         String d = personalNumber.substring(4, 6);
-        String numberAfterDash = personalNumber.substring(6,9);
+        String secretNumber = personalNumber.substring(6,11);
 
         year = Integer.parseInt(y);
         month = Integer.parseInt(m);
         day = Integer.parseInt(d);
         validity = (year + month + day)%11;
 
-
-        if (personalNumber.length() == 11) { //length validity
-            System.out.println("value length is valid");
-        } else {
-            System.out.println("value length is not valid");
+        if (validity==0) {
+            if(month>50 & month<63) { // testing if person is a woman or a man
+                sex="woman";
+            }else{
+                sex="man";
+            }
+            System.out.println(day + "." + month + "." + year + " " + sex + " secret number = " + secretNumber);
+            return true;
         }
 
-        if (validity==0){ // personal number validity
-            System.out.println("personal number is valid");
-        }else{
-            System.out.println("personal number is not valid");
-        }
 
-        if(month>50 & month<63){ // testing if person is a woman or a man
-            sex="woman";
-        }else{
-            sex="man";
-        }
 
-System.out.println(day + "." + month + "." + year + " " + sex + " number after dash = " + numberAfterDash);
+
         return false;
 
     }
