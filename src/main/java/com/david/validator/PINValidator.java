@@ -1,13 +1,13 @@
 package com.david.validator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class PINValidator {
+
     static int day;
     static int month;
     static int year;
+    static int validity;
+    static String sex;
+
 
     public static boolean isPINValid(String personalNumber) {
 
@@ -16,51 +16,37 @@ public class PINValidator {
         // validace zda se jedná o validní řetězec PIN (rodné číslo)
         // vyextrahovat jednotlivé prvky: datum, pohlaví, bezpečnostní známku (číslo za lomítkem)
 
-        if (personalNumber.length() == 11) {
-            System.out.println("délka řetězce je validní");
-        } else {
-            System.out.println("délka řetězce není validní");
-        }
-
-        return false;
-    }
-
-    static void personalNumberValidity(String personalNumber) {
-    }
-
-    static void personalNumberCutter(String personalNumber) {
         String y = personalNumber.substring(0, 2);
         String m = personalNumber.substring(2, 4);
         String d = personalNumber.substring(4, 6);
+        String numberAfterDash = personalNumber.substring(6,9);
 
         year = Integer.parseInt(y);
-
-        if (year > 22) {
-            year += 1900;
-        } else {
-            year += 2000;
-        }
-
         month = Integer.parseInt(m);
-
-        if (month > 12) {
-            month -= 50;
-        }
-
         day = Integer.parseInt(d);
-    }
+        validity = (year + month + day)%11;
 
-    static void sex(String personalNumber) {
-        String sex;
 
-        if (month > 12) {
-            sex = "woman";
+        if (personalNumber.length() == 11) { //length validity
+            System.out.println("value length is valid");
         } else {
-            sex = "man";
+            System.out.println("value length is not valid");
         }
-    }
 
-    static void vypis(String personalNumber) {
-        System.out.format("%02d", "%02d", "%04d", day, month, year);
+        if (validity==0){ // personal number validity
+            System.out.println("personal number is valid");
+        }else{
+            System.out.println("personal number is not valid");
+        }
+
+        if(month>50 & month<63){ // testing if person is a woman or a man
+            sex="woman";
+        }else{
+            sex="man";
+        }
+
+System.out.println(day + "." + month + "." + year + " " + sex + " number after dash = " + numberAfterDash);
+        return false;
+
     }
 }
